@@ -1,0 +1,161 @@
+{
+  "id": "case02",
+  "title": "The Coonoor Emeralds",
+  "subtitle": "Coonoor Railway Station, Nilgiris — 3 December 1947",
+  "intro": [
+    "Four months after Independence, the Maharani of Kumarapuram is sending her famous emerald necklace up the Nilgiri Mountain Railway to Ooty for a wedding.",
+    "Overnight, the jewels sat locked in the Station Master's safe at Coonoor. At 7:00 AM, when the safe was opened for the toy train, the seal was intact — and the necklace was fake. Paste and glass.",
+    "Three people had business near that safe this morning. The train leaves at 8:00. Find the thief before it does."
+  ],
+  "briefing": {
+    "victim": "The Maharani of Kumarapuram's emerald necklace (valued at Rs. 2 lakh)",
+    "found": "Replaced with a paste replica, discovered at 7:00 AM",
+    "location": "Coonoor Railway Station",
+    "notes": "The safe has one key, held by the Station Master. The case seal was unbroken."
+  },
+  "accuseQuestion": "Who stole the emeralds?",
+  "setting": {
+    "weather": "mist",
+    "skyColor": "#8f9b9e",
+    "fogColor": "#9aa5a8",
+    "fogNear": 3,
+    "fogFar": 22,
+    "ambient": 1.1,
+    "groundColor": "#3d4a36"
+  },
+  "start": { "room": "waiting", "pos": [-3.2, 1.6], "facing": -60 },
+  "rooms": [
+    {
+      "id": "waiting",
+      "name": "First-Class Waiting Room",
+      "center": [0, 0],
+      "size": [9, 6],
+      "height": 3.6,
+      "floor": "#8a7a62",
+      "floorStyle": "stone",
+      "wall": "#d8c9a3",
+      "wainscot": "#6a4a2a",
+      "ceiling": "#5a4a3a",
+      "light": { "color": "#fff1d6", "intensity": 9 },
+      "props": [
+        { "type": "bench", "pos": [-2.2, 2.4], "size": [2.2, 0.9, 0.6], "rotY": 180, "color": "#5a3a1e" },
+        { "type": "bench", "pos": [2.2, 2.4], "size": [2.2, 0.9, 0.6], "rotY": 180, "color": "#5a3a1e" },
+        { "type": "bench", "pos": [-2.2, -2.4], "size": [2.2, 0.9, 0.6], "color": "#5a3a1e" },
+        { "type": "stove", "pos": [3.6, -2.4], "size": [0.9, 1.0, 0.8], "color": "#262626", "name": "Pot-bellied Stove", "examine": "A coal stove, ticking with heat. A coal scuttle beside it, freshly filled." },
+        { "type": "clock", "pos": [-4.3, 0], "size": [0.6, 2.2, 0.4], "rotY": 90, "color": "#3a2410", "name": "Station Clock", "examine": "Railway time: 7:14 AM. The 8:00 to Ootacamund is chalked on the board beside it." },
+        { "type": "cylinder", "pos": [0.4, -2.5], "size": [0.45, 0.6, 0.45], "color": "#4a4a42", "name": "Dustbin" },
+        { "type": "plant", "pos": [4.0, 2.4], "size": [0.6, 1.4, 0.6], "color": "#3a6a2a" },
+        { "type": "box", "pos": [0.8, 0.6], "size": [0.9, 0.5, 0.6], "rotY": 20, "color": "#6a4a2a", "name": "Luggage Trunk", "examine": "A steamer trunk stencilled 'D. CLARKE — MADRAS'. Locked." }
+      ]
+    },
+    {
+      "id": "office",
+      "name": "Station Master's Office",
+      "center": [7, 0],
+      "size": [5, 6],
+      "height": 3.6,
+      "floor": "#6b4a2b",
+      "floorStyle": "wood",
+      "wall": "#a8b89a",
+      "wainscot": "#3a2a18",
+      "ceiling": "#4a3a2a",
+      "light": { "color": "#ffe6c0", "intensity": 7 },
+      "props": [
+        { "type": "desk", "pos": [0.4, -1.4], "size": [1.8, 0.8, 0.9], "color": "#4a2a14" },
+        { "type": "chair", "pos": [0.4, -2.2], "size": [0.55, 1.0, 0.55], "color": "#2e1a0c" },
+        { "type": "cabinet", "pos": [1.9, 1.6], "size": [1.0, 1.2, 0.8], "rotY": -90, "color": "#3a3a3e", "name": "Safe", "examine": "A Chubb safe, door open. One key — the Station Master's. The jewel case inside still wears its unbroken wax seal." },
+        { "type": "bookshelf", "pos": [-2.2, 1.6], "size": [1.6, 2.4, 0.4], "rotY": 90, "color": "#3a2410" },
+        { "type": "painting", "pos": [0, 2.9], "y": 1.7, "rotY": 180, "size": [1.2, 0.8, 0.05], "color": "#7a2a1a", "name": "Railway Map", "examine": "The Nilgiri Mountain Railway: Mettupalayam, Kallar, Coonoor, Wellington, Lovedale, Ootacamund. Rack and pinion, all the way up." }
+      ]
+    }
+  ],
+  "openings": [
+    { "type": "door", "x": 4.5, "z": -0.6, "width": 1.4, "top": 2.4 },
+    { "type": "window", "x": -2, "z": -3, "width": 1.8, "bottom": 1.0, "top": 2.6 },
+    { "type": "window", "x": 2, "z": -3, "width": 1.8, "bottom": 1.0, "top": 2.6 },
+    { "type": "window", "x": 0, "z": 3, "width": 2.2, "bottom": 1.0, "top": 2.6 },
+    { "type": "window", "x": 7, "z": -3, "width": 1.4, "bottom": 1.0, "top": 2.6 }
+  ],
+  "clues": [
+    {
+      "id": "c2_paste", "name": "The Paste Necklace", "room": "office", "pos": [1.6, 1.6], "y": 1.2, "shape": "necklace", "color": "#2faa6a",
+      "description": "A clever fake — green glass in a gilt setting. But on the inside of the clasp, scratched almost too small to see: 'M.P.W.' The mark of the Madras Paste Works.",
+      "pickup": false
+    },
+    {
+      "id": "c2_logbook", "name": "Station Log Book", "room": "office", "pos": [0.1, -1.4], "y": 0.8, "shape": "book", "color": "#2a3a5a",
+      "description": "'6:30 AM — Safe opened at request of Mr. D. Clarke, insurance assessor, to inspect the Kumarapuram jewels. Inspection 10 mins. Case re-sealed by Mr. Clarke with his own wax.' Nobody else opened the safe all night."
+    },
+    {
+      "id": "c2_receipt", "name": "Torn Receipt", "room": "waiting", "pos": [0.4, -2.5], "y": 0.6, "shape": "paper", "color": "#efe6cf",
+      "description": "Fished from the dustbin, torn in four: 'MADRAS PASTE WORKS, Mount Road. One replica necklace, emerald pattern, to customer's drawing. Paid in full — D.C.'"
+    },
+    {
+      "id": "c2_pawn", "name": "Pawn Ticket", "room": "waiting", "pos": [-2.2, 2.4], "y": 0.45, "shape": "paper", "color": "#d8c890",
+      "description": "A Coonoor pawnbroker's ticket for 'two gold bangles', in the name R. D'Souza, dated last week. Someone needed money."
+    },
+    {
+      "id": "c2_boots", "name": "Coal-dusted Boots", "room": "waiting", "pos": [3.0, -1.6], "shape": "box", "color": "#1a1a1a",
+      "description": "A porter's boots by the stove, black with coal dust right up to the laces. Whoever wore them spent the early morning hauling coal on the platform, not in an office.",
+      "pickup": false
+    }
+  ],
+  "suspects": [
+    {
+      "id": "clarke", "name": "Desmond Clarke", "role": "Insurance assessor from Madras",
+      "room": "waiting", "pos": [2.0, 1.2], "facing": 200,
+      "color": "#c8c0a8", "skin": "#e8c8a8", "hair": "#6a4a2a", "hat": "#d8d0b8",
+      "bio": "45. Assessor for the Bombay & Madras Insurance Co. Travels with a jeweller's loupe and a very large trunk.",
+      "greeting": "Desmond Clarke, Bombay & Madras Insurance. Dreadful business. My company will want this solved before that train leaves, Detective — and so do I.",
+      "dialogue": [
+        { "id": "d2_cl_when", "ask": "When did you last see the real necklace?", "answer": "Last night at the palace, when it was packed. Genuine, every stone. I swear it.", "statement": "Clarke claims he last saw the real necklace at the palace last night." },
+        { "id": "d2_cl_log", "ask": "The log says you opened the safe at 6:30 this morning.", "requires": ["c2_logbook"], "answer": "Ah — yes. Routine inspection. I'd quite forgotten. The stones looked perfectly fine to me then. Perfectly.", "statement": "Clarke admits he inspected the jewels alone at 6:30 AM and re-sealed the case." },
+        { "id": "d2_cl_receipt", "ask": "Madras Paste Works. Paid in full, 'D.C.'", "requires": ["c2_receipt"], "answer": "Plenty of men in Madras have the initials D.C., Detective. I— I'd like to sit down.", "statement": "Clarke goes pale at the paste-works receipt." }
+      ]
+    },
+    {
+      "id": "rosalind", "name": "Rosalind D'Souza", "role": "The Maharani's secretary",
+      "room": "waiting", "pos": [-2.8, -1.4], "facing": 30,
+      "color": "#6a3a7a", "skin": "#b08060", "hair": "#1a1008",
+      "bio": "27. From Mangalore. Escorting the necklace to Ooty. Her family is in debt.",
+      "greeting": "Rosalind D'Souza. The Maharani trusted me with those emeralds. If they're not found, Detective, I'm finished.",
+      "dialogue": [
+        { "id": "d2_ro_night", "ask": "Where were you this morning?", "answer": "Here in the waiting room, from six. Mr. Clarke went into the office alone at half past — he said insurance rules required it.", "statement": "Rosalind says Clarke went into the office alone at 6:30 AM." },
+        { "id": "d2_ro_pawn", "ask": "Why did you pawn your bangles?", "requires": ["c2_pawn"], "answer": "My father's doctor's bills. It's shameful, not criminal. If I'd stolen two lakh of emeralds, would I need to pawn my mother's bangles?", "statement": "Rosalind pawned her bangles for her father's medical bills." }
+      ]
+    },
+    {
+      "id": "murugan", "name": "Murugan", "role": "Station porter",
+      "room": "office", "pos": [-1.2, 0.6], "facing": 120,
+      "color": "#a03020", "skin": "#6a4228", "hair": "#101010",
+      "bio": "40. Porter at Coonoor for fifteen years. Wears the red railway coat.",
+      "greeting": "Vanakkam, sir. Murugan, porter. Fifteen years on this platform — never one paisa missing.",
+      "dialogue": [
+        { "id": "d2_mu_where", "ask": "Where were you between six and seven?", "answer": "On the platform, sir, loading coal for the engine. Look at my boots! Station Master sahib can tell you.", "statement": "Murugan says he was loading coal on the platform from 6 to 7 AM." },
+        { "id": "d2_mu_saw", "ask": "Did you see anyone near the office?", "answer": "Only the insurance sahib, sir. He came out at twenty to seven, wiping his hands with a handkerchief. In this cold, he was sweating.", "statement": "Murugan saw Clarke leave the office at 6:40, sweating in the cold." }
+      ]
+    }
+  ],
+  "timeline": [
+    { "time": "Night", "text": "The jewel case is sealed and locked in the Station Master's safe." },
+    { "time": "6:00 AM", "text": "Murugan begins loading coal on the platform.", "unlockedBy": ["d2_mu_where", "c2_boots"] },
+    { "time": "6:30 AM", "text": "Mr. Clarke has the safe opened and inspects the jewels alone.", "unlockedBy": ["c2_logbook", "d2_ro_night"] },
+    { "time": "6:40 AM", "text": "Clarke leaves the office, sweating in the cold.", "unlockedBy": ["d2_mu_saw"] },
+    { "time": "7:00 AM", "text": "The safe is opened for the train. The necklace is paste." }
+  ],
+  "motives": [
+    { "id": "m2_greed", "text": "Greed — swap the real stones for a pre-made fake and sell them" },
+    { "id": "m2_debt", "text": "To pay a family's medical debts" },
+    { "id": "m2_wage", "text": "Desperation on a porter's wage" }
+  ],
+  "solution": {
+    "culprit": "clarke",
+    "motive": "m2_greed",
+    "evidence": ["c2_logbook", "c2_receipt", "c2_paste"],
+    "explanation": [
+      "Desmond Clarke stole the Kumarapuram emeralds.",
+      "Weeks ago he commissioned a replica from the Madras Paste Works, drawn from the insurance photographs. At 6:30 AM he used his authority as assessor to have the safe opened, swapped the real necklace for the fake during his 'inspection', and re-sealed the case with his own wax.",
+      "The real emeralds are in the false bottom of his trunk. He threw away the receipt — but not far enough."
+    ]
+  }
+}

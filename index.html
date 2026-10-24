@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#0f0c08">
+  <title>Ooty Mysteries</title>
+  <meta name="description" content="A 3D detective mystery game set in the Nilgiri hills.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <!-- In-game HUD -->
+  <div id="hud" class="hidden">
+    <div id="hud-top">
+      <div id="hud-location"><span id="hud-case"></span><span id="hud-room"></span></div>
+      <div class="hud-buttons">
+        <button data-action="notebook" title="Notebook (N)"><span class="ico">📓</span><span class="lbl">Notebook</span><span class="badge hidden" id="badge-notebook"></span></button>
+        <button data-action="timeline" title="Timeline (T)"><span class="ico">🕰️</span><span class="lbl">Timeline</span><span class="badge hidden" id="badge-timeline"></span></button>
+        <button data-action="accuse" title="Make an accusation"><span class="ico">⚖️</span><span class="lbl">Accuse</span></button>
+        <button data-action="pause" title="Menu (Esc)"><span class="ico">☰</span></button>
+      </div>
+    </div>
+    <div id="clue-count"></div>
+    <div id="crosshair"></div>
+    <div id="prompt" class="hidden"></div>
+    <div id="room-toast"></div>
+    <div id="lock-hint" class="hidden"></div>
+    <div id="touch-controls">
+      <div id="joystick"><div id="joystick-knob"></div></div>
+      <button id="touch-interact" class="hidden">Examine</button>
+    </div>
+  </div>
+
+  <!-- Main menu -->
+  <section id="screen-menu" class="screen rainy">
+    <div class="menu-inner">
+      <p class="eyebrow">A Nilgiri Detective Series</p>
+      <h1>Ooty<br>Mysteries</h1>
+      <p class="tagline">Monsoon. Murder. Five liars and one truth.</p>
+      <div class="menu-buttons">
+        <button class="btn primary" id="btn-cases">Case Files</button>
+        <button class="btn" id="btn-howto">How to Play</button>
+        <button class="btn ghost" id="btn-sound"></button>
+      </div>
+      <button class="link" id="btn-reset">Reset all progress</button>
+    </div>
+  </section>
+
+  <!-- Case select -->
+  <section id="screen-cases" class="screen hidden rainy">
+    <div class="screen-head">
+      <button class="btn ghost small" data-back="menu">← Back</button>
+      <h2>Case Files</h2>
+    </div>
+    <div id="case-list" class="case-list"></div>
+    <p class="hint-text">Solve a case to unlock the next one. Progress is saved in this browser.</p>
+  </section>
+
+  <!-- Case intro -->
+  <section id="screen-intro" class="screen hidden rainy">
+    <div class="paper">
+      <p class="eyebrow" id="intro-number"></p>
+      <h2 id="intro-title"></h2>
+      <p class="sub" id="intro-subtitle"></p>
+      <div id="intro-text"></div>
+      <dl id="intro-briefing" class="briefing"></dl>
+      <div class="row-buttons" id="intro-buttons"></div>
+    </div>
+  </section>
+
+  <!-- Result -->
+  <section id="screen-result" class="screen hidden rainy">
+    <div class="paper" id="result-body"></div>
+  </section>
+
+  <!-- Modal overlay used for clues, dialogue, notebook, timeline, accusation, pause -->
+  <div id="overlay" class="hidden"><div id="overlay-panel" class="panel"></div></div>
+  <div id="toasts"></div>
+  <div id="loading" class="screen"><p>Opening the case files…</p></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

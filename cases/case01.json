@@ -1,0 +1,326 @@
+{
+  "id": "case01",
+  "title": "Death in the Monsoon",
+  "subtitle": "Ravenscroft Bungalow, Ootacamund — 14 July 1946",
+  "intro": [
+    "The monsoon has swallowed the Nilgiris. For three days the rain has not stopped, and tonight the ghat road below Ootacamund has washed away.",
+    "At 10:30 PM, Colonel Arthur Pemberton — retired soldier, owner of the Ravenscroft Tea Estate, and the most feared man at the Ooty Club — was found dead on the floor of his study.",
+    "The family doctor says his heart simply gave out. The household wants you to agree, sign the paper, and let everyone go back to bed.",
+    "But nobody can leave this bungalow until the road is cleared at dawn. Five people were under this roof tonight. One of them is lying.",
+    "You are the only detective for forty miles. Search the rooms. Question the household. Find the truth before the rain stops."
+  ],
+  "briefing": {
+    "victim": "Col. Arthur Pemberton (62), retired, owner of Ravenscroft Tea Estate",
+    "found": "10:30 PM on the floor of his study, by the butler",
+    "location": "Ravenscroft Bungalow, Ootacamund, Nilgiris",
+    "notes": "Storm caused a power cut from 9:40 to 9:55 PM. The ghat road is flooded — no one has left the house."
+  },
+  "setting": {
+    "weather": "rain",
+    "lightning": true,
+    "skyColor": "#141c24",
+    "fogColor": "#1a222b",
+    "fogNear": 6,
+    "fogFar": 34,
+    "ambient": 0.55,
+    "groundColor": "#1f2b1c"
+  },
+  "start": { "room": "drawing", "pos": [1.2, 2.6], "facing": 20 },
+  "rooms": [
+    {
+      "id": "drawing",
+      "name": "Drawing Room",
+      "center": [-4, 4],
+      "size": [8, 8],
+      "height": 3.2,
+      "floor": "#5a3a22",
+      "floorStyle": "wood",
+      "wall": "#c9b38a",
+      "wainscot": "#5b3b23",
+      "ceiling": "#3a2a1c",
+      "light": { "color": "#ffcf8a", "intensity": 14 },
+      "props": [
+        { "type": "rug", "pos": [0, 0], "size": [4.2, 0.02, 3.2], "color": "#7a1f1f" },
+        { "type": "fireplace", "pos": [-3.65, 0], "size": [2.0, 1.5, 0.6], "rotY": 90, "color": "#6d6457", "name": "Fireplace", "examine": "The fire has burned low. A brass poker leans against the grate — clean, untouched." },
+        { "type": "sofa", "pos": [-0.2, 0], "size": [2.4, 0.85, 0.95], "rotY": -90, "color": "#3f5a3a" },
+        { "type": "armchair", "pos": [-2.2, 2.1], "size": [1.0, 0.95, 1.0], "rotY": 150, "color": "#6b2d2d" },
+        { "type": "armchair", "pos": [-2.2, -2.1], "size": [1.0, 0.95, 1.0], "rotY": 30, "color": "#6b2d2d" },
+        { "type": "table", "pos": [2.6, 1.5], "size": [1.3, 0.75, 0.7], "color": "#4a2e18" },
+        { "type": "clock", "pos": [3.65, -1.4], "size": [0.6, 2.2, 0.45], "rotY": -90, "color": "#3d2414", "name": "Grandfather Clock", "examine": "The grandfather clock reads the correct time. The power cut never touched it — it is wound by hand every Sunday by Raghavan." },
+        { "type": "lamp", "pos": [3.3, 3.3], "size": [0.5, 1.7, 0.5], "color": "#c9a46a" },
+        { "type": "cabinet", "pos": [2.8, -3.65], "size": [1.6, 1.1, 0.5], "color": "#4a2e18", "name": "Gramophone Cabinet", "examine": "A gramophone cabinet. The record on the turntable is 'Lili Marlene'. Someone stopped it mid-song." },
+        { "type": "door", "pos": [0, 3.9], "size": [1.3, 2.3, 0.1], "color": "#3b2412", "name": "Front Door", "examine": "The front door. Rain hammers against it like fists. The ghat road is flooded — nobody leaves before dawn." },
+        { "type": "painting", "pos": [2.6, -3.9], "y": 1.7, "size": [1.4, 1.0, 0.05], "color": "#2c3e2a", "name": "Portrait of the Colonel", "examine": "Col. Arthur Pemberton in full dress uniform, 1931. Even in oils, his stare makes you want to apologise." },
+        { "type": "plant", "pos": [-3.3, 3.3], "size": [0.6, 1.2, 0.6], "color": "#2f5a2a" }
+      ]
+    },
+    {
+      "id": "study",
+      "name": "The Colonel's Study",
+      "center": [-4, -4],
+      "size": [8, 8],
+      "height": 3.2,
+      "floor": "#3e2716",
+      "floorStyle": "wood",
+      "wall": "#6b4f3a",
+      "wainscot": "#2e1d10",
+      "ceiling": "#2a1c12",
+      "light": { "color": "#ffbf70", "intensity": 10 },
+      "props": [
+        { "type": "rug", "pos": [-0.8, 1.2], "size": [2.4, 0.02, 1.6], "color": "#b5651d", "name": "Tiger-skin Rug", "examine": "A tiger-skin rug, the Colonel's trophy from a 1928 shikar. Its glass eyes saw everything tonight." },
+        { "type": "desk", "pos": [0.5, -1.6], "size": [2.2, 0.8, 1.0], "color": "#3b2210" },
+        { "type": "chair", "pos": [0.5, -2.5], "size": [0.6, 1.0, 0.6], "rotY": 0, "color": "#2b1a0c" },
+        { "type": "bookshelf", "pos": [3.7, -1.0], "size": [2.6, 2.7, 0.45], "rotY": -90, "color": "#2e1b0d" },
+        { "type": "bookshelf", "pos": [-3.7, 2.6], "size": [1.8, 2.7, 0.45], "rotY": 90, "color": "#2e1b0d" },
+        { "type": "outline", "pos": [1.6, 0.4], "size": [1.8, 0.01, 0.7], "rotY": 25, "color": "#e8e4d8", "name": "Where the Colonel Fell", "examine": "This is where Raghavan found the Colonel, face down between the desk and the door. No wounds. No struggle. His lips were bluish." },
+        { "type": "cabinet", "pos": [-2.6, -3.65], "size": [1.4, 1.0, 0.5], "color": "#3b2210", "name": "Gun Cabinet", "examine": "A locked gun cabinet. Every rifle is in place, oiled and gleaming. Whatever killed the Colonel, it wasn't a bullet." },
+        { "type": "painting", "pos": [3.9, 2.4], "y": 1.6, "rotY": -90, "size": [1.2, 0.8, 0.05], "color": "#4a6a8a", "name": "Map of the Estate", "examine": "A hand-drawn map of the Ravenscroft Tea Estate — 600 acres of hillside, and 400 pickers who work it." }
+      ]
+    },
+    {
+      "id": "dining",
+      "name": "Dining Room",
+      "center": [4, 4],
+      "size": [8, 8],
+      "height": 3.2,
+      "floor": "#6b4a2b",
+      "floorStyle": "wood",
+      "wall": "#7f9174",
+      "wainscot": "#3f2a18",
+      "ceiling": "#33261a",
+      "light": { "color": "#ffd59a", "intensity": 14 },
+      "props": [
+        { "type": "table", "pos": [0, 0.3], "size": [1.6, 0.78, 4.4], "color": "#4a2a14", "name": "Dining Table", "examine": "The dinner plates are still out. Mulligatawny, mutton cutlets, caramel custard. Six places — one chair pushed back hard." },
+        { "type": "chair", "pos": [-1.15, -1.2], "size": [0.55, 1.0, 0.55], "rotY": 90, "color": "#3a2010" },
+        { "type": "chair", "pos": [-1.15, 0.3], "size": [0.55, 1.0, 0.55], "rotY": 90, "color": "#3a2010" },
+        { "type": "chair", "pos": [-1.15, 1.8], "size": [0.55, 1.0, 0.55], "rotY": 90, "color": "#3a2010" },
+        { "type": "chair", "pos": [1.15, -1.2], "size": [0.55, 1.0, 0.55], "rotY": -90, "color": "#3a2010" },
+        { "type": "chair", "pos": [1.15, 0.3], "size": [0.55, 1.0, 0.55], "rotY": -90, "color": "#3a2010" },
+        { "type": "chair", "pos": [1.15, 1.8], "size": [0.55, 1.0, 0.55], "rotY": -90, "color": "#3a2010" },
+        { "type": "cabinet", "pos": [-2.4, -3.65], "size": [2.2, 1.0, 0.55], "color": "#3f2412", "name": "Sideboard" },
+        { "type": "painting", "pos": [-3.9, 2.4], "y": 1.6, "rotY": 90, "size": [1.0, 0.7, 0.05], "color": "#7a5a2a", "name": "Hunting Print", "examine": "A print of the Ooty Hunt, 1905. Red coats, hounds, and jackals in the Wenlock Downs." },
+        { "type": "plant", "pos": [3.3, -3.3], "size": [0.6, 1.3, 0.6], "color": "#2f5a2a" }
+      ]
+    },
+    {
+      "id": "kitchen",
+      "name": "Kitchen",
+      "center": [4, -4],
+      "size": [8, 8],
+      "height": 3.0,
+      "floor": "#5c5a54",
+      "floorStyle": "stone",
+      "wall": "#b8ad94",
+      "ceiling": "#3a352c",
+      "light": { "color": "#ffe2b0", "intensity": 11 },
+      "props": [
+        { "type": "stove", "pos": [2.6, -3.4], "size": [1.4, 0.9, 0.9], "color": "#1e1e1e", "name": "Wood Stove" },
+        { "type": "table", "pos": [-0.2, 0.4], "size": [2.2, 0.85, 1.0], "color": "#7a5a3a", "name": "Work Table", "examine": "A scrubbed work table. A sack of rice, an onion basket, and a knife — clean, put away exactly where it belongs." },
+        { "type": "cabinet", "pos": [-3.65, -1.0], "size": [2.4, 1.9, 0.6], "rotY": 90, "color": "#5a4028", "name": "Pantry Shelves", "examine": "Jars of pickle, tins of Nilgiri tea, Huntley & Palmers biscuits. Nothing missing, nothing disturbed." },
+        { "type": "cylinder", "pos": [-3.2, 3.2], "size": [0.8, 0.9, 0.8], "color": "#7a6a4a", "name": "Water Drum", "examine": "A brass water drum, full to the brim with rainwater." },
+        { "type": "box", "pos": [-2.0, 3.4], "size": [0.8, 0.5, 0.6], "color": "#6a5030" },
+        { "type": "box", "pos": [-2.0, 3.4], "y": 0.5, "size": [0.6, 0.4, 0.5], "rotY": 15, "color": "#7a5c38" }
+      ]
+    }
+  ],
+  "openings": [
+    { "type": "door", "x": -4, "z": 0, "width": 1.6, "top": 2.3 },
+    { "type": "door", "x": 0, "z": 4, "width": 1.6, "top": 2.3 },
+    { "type": "door", "x": 4, "z": 0, "width": 1.4, "top": 2.2 },
+    { "type": "window", "x": -6.5, "z": 8, "width": 1.8, "bottom": 0.9, "top": 2.4 },
+    { "type": "window", "x": -1.5, "z": 8, "width": 1.8, "bottom": 0.9, "top": 2.4 },
+    { "type": "window", "x": -8, "z": -4, "width": 2.0, "bottom": 0.9, "top": 2.4 },
+    { "type": "window", "x": -4, "z": -8, "width": 1.6, "bottom": 0.9, "top": 2.4 },
+    { "type": "window", "x": 4, "z": 8, "width": 2.4, "bottom": 0.9, "top": 2.4 },
+    { "type": "window", "x": 8, "z": 4, "width": 2.0, "bottom": 0.9, "top": 2.4 },
+    { "type": "window", "x": 8, "z": -4, "width": 1.4, "bottom": 1.0, "top": 2.2 },
+    { "type": "window", "x": 4, "z": -8, "width": 1.4, "bottom": 1.0, "top": 2.2 }
+  ],
+  "clues": [
+    {
+      "id": "c_bag",
+      "name": "Dr. Hale's Medical Bag",
+      "room": "drawing", "pos": [2.6, 1.5], "y": 0.75, "shape": "bag", "color": "#2a1a10",
+      "description": "A battered leather bag stamped 'E. Hale, M.B. — Coonoor Dispensary'. Twelve vials sit in neat loops. One loop is empty — the one labelled DIGITALIS.",
+      "pickup": false
+    },
+    {
+      "id": "c_ticket",
+      "name": "One-way Steamer Ticket",
+      "room": "drawing", "pos": [-2.2, -2.1], "y": 0.5, "shape": "paper", "color": "#e6d8b0",
+      "description": "P&O steamer ticket, Bombay to Southampton, sailing 2 August 1946. One passenger: Mrs. M. Pemberton. One way. Tucked deep inside her handbag on the armchair."
+    },
+    {
+      "id": "c_umbrella",
+      "name": "Wet Umbrella",
+      "room": "drawing", "pos": [-1.1, 3.4], "shape": "umbrella", "color": "#1b1b1b",
+      "description": "A black army umbrella, still dripping. Initials on the handle: V.R. The mud on its tip is only verandah-tile grime — not garden mud.",
+      "pickup": false
+    },
+    {
+      "id": "c_glass",
+      "name": "Brandy Glass",
+      "room": "study", "pos": [0.9, -1.5], "y": 0.8, "shape": "glass", "color": "#c98a3a",
+      "description": "The Colonel's brandy glass, a third full. Under the brandy there is a sharp, bitter, herbal smell — the smell of medicine. A faint green residue clings to the bottom."
+    },
+    {
+      "id": "c_watch",
+      "name": "Broken Pocket Watch",
+      "room": "study", "pos": [1.9, 0.9], "shape": "watch", "color": "#d4af37",
+      "description": "The Colonel's gold pocket watch, glass cracked from the fall. The hands are frozen at 9:52. He died during the power cut."
+    },
+    {
+      "id": "c_letter",
+      "name": "Unfinished Letter",
+      "room": "study", "pos": [0.0, -1.7], "y": 0.8, "shape": "paper", "color": "#f2ecd9",
+      "description": "To the Manager, Imperial Bank, Madras. '...I intend to call in Dr. Edmund Hale's loan of Rs. 4,000 in full, and I shall inform the Medical Council of the prescriptions he has been forging in my name to cover his gambling. I will tell him so tomorr—' The pen line trails off the page."
+    },
+    {
+      "id": "c_ledger",
+      "name": "Estate Wage Ledger",
+      "room": "study", "pos": [1.4, -1.8], "y": 0.8, "shape": "book", "color": "#5a1a1a",
+      "description": "The Ravenscroft wage ledger. Two sets of figures — the wages written in the books and, in the Colonel's own hand, the wages actually paid. The pickers have been cheated for three years. Pencilled in the margin, in a woman's hand: 'L.M. — I know.'"
+    },
+    {
+      "id": "c_decanter",
+      "name": "Brandy Decanter",
+      "room": "dining", "pos": [-2.8, -3.6], "y": 1.0, "shape": "bottle", "color": "#8a4a1a",
+      "description": "The crystal decanter the Colonel's brandy was poured from. It smells of nothing but good French brandy — no bitterness. Whatever was in his glass was added after it was poured."
+    },
+    {
+      "id": "c_seating",
+      "name": "Dinner Seating Card",
+      "room": "dining", "pos": [0.4, -1.4], "y": 0.78, "shape": "paper", "color": "#ffffff",
+      "description": "Margaret's seating plan: the Colonel at the head, Dr. Hale at his right hand. A note in the margin: 'E.H. to give A. his drops after soup — 8:45.'"
+    },
+    {
+      "id": "c_vial",
+      "name": "Half-burnt Vial",
+      "room": "kitchen", "pos": [2.6, -3.0], "y": 0.9, "shape": "bottle", "color": "#2f6a4a",
+      "description": "Raked out of the stove ash: a small glass vial, cracked by heat, the label half burnt. What survives reads: 'TINCT. DIGITALIS — E. HALE, COONOOR'. It is completely empty. A full vial is enough to stop a weak heart."
+    },
+    {
+      "id": "c_slate",
+      "name": "Kitchen Slate",
+      "room": "kitchen", "pos": [-0.8, 0.5], "y": 0.85, "shape": "slate", "color": "#2b2f33",
+      "description": "Raghavan's chalk slate of the evening's duties: '7:30 dinner. 8:45 Doctor sahib — drops. 9:30 brandy to study. Close stove.' Each item is ticked, including 'close stove'."
+    },
+    {
+      "id": "c_lantern",
+      "name": "Storm Lanterns",
+      "room": "kitchen", "pos": [0.6, 0.6], "y": 0.85, "shape": "lantern", "color": "#b07a2a",
+      "description": "Three hurricane lanterns, wicks still warm, their bases caked with the red mud of the path to the godown. Raghavan really did go out in the storm to fetch them.",
+      "pickup": false
+    }
+  ],
+  "suspects": [
+    {
+      "id": "margaret",
+      "name": "Margaret Pemberton",
+      "role": "The Colonel's wife",
+      "room": "drawing", "pos": [-1.6, 2.8], "facing": 180,
+      "color": "#4a5a7a", "skin": "#e8c8a8", "hair": "#8a6a3a",
+      "bio": "English, 54. Twenty-six years in the hills, and every one of them she has wanted to go home.",
+      "greeting": "Detective. My husband is dead, the roads are drowned, and I am trapped in this damp house with his 'friends'. Ask your questions.",
+      "dialogue": [
+        { "id": "d_mar_marriage", "ask": "How was your marriage?", "answer": "Arthur loved this estate more than he ever loved me. I wanted to go home to England. He refused — he said a Pemberton wife does not run away.", "statement": "Margaret admits she wanted to leave the Colonel and return to England." },
+        { "id": "d_mar_cut", "ask": "What happened during the power cut?", "answer": "We sat in the dark like fools. Edmund — Dr. Hale — said he would go and wash his hands. He was gone a good long while. When the lights came back at five to ten, he was just walking back in. Rather out of breath, for a man who'd only been to the basin.", "statement": "Margaret says Dr. Hale left the drawing room during the power cut and came back at 9:55, out of breath." },
+        { "id": "d_mar_hale", "ask": "What do you know about Dr. Hale?", "answer": "Charming. In debt to half the Club. Arthur lent him money last spring — he never told me, but I read his correspondence. A wife learns to.", "statement": "Margaret says the Colonel lent Dr. Hale money last spring." },
+        { "id": "d_mar_ticket", "ask": "Explain this one-way ticket to Southampton.", "requires": ["c_ticket"], "answer": "Yes, I bought it. I was going to leave him, Detective. Leave — not kill. Divorce is a scandal. Murder is far too much effort, and I'd never have got the ticket refunded.", "statement": "Margaret admits the steamer ticket is hers — she planned to leave, not to kill." }
+      ]
+    },
+    {
+      "id": "vikram",
+      "name": "Capt. Vikram Rao",
+      "role": "The Colonel's ward, Madras Regiment",
+      "room": "drawing", "pos": [2.4, -1.2], "facing": -60,
+      "color": "#5a6a3a", "skin": "#a8774f", "hair": "#1a1410", "hat": "#4a5a2a",
+      "bio": "29. The Colonel took him in after his father died at Kohima. Just back from Burma. Heir to the estate.",
+      "greeting": "Captain Vikram Rao. The Colonel was my guardian after my father fell at Kohima. Whatever else he was — I owe that man my life.",
+      "dialogue": [
+        { "id": "d_vik_where", "ask": "Where were you during the power cut?", "answer": "On the verandah with Miss Menon. We stepped out at half past nine for some air — and some privacy, if I'm honest. We came back in when the lights returned.", "statement": "Vikram says he was on the verandah with Lakshmi Menon from 9:35 until the lights returned." },
+        { "id": "d_vik_will", "ask": "Do you inherit the estate?", "answer": "So I'm told. I never asked for it. I've seen enough death in Burma to last ten lifetimes, Detective. I don't need to cause any more.", "statement": "Vikram confirms he is the Colonel's heir." },
+        { "id": "d_vik_umbrella", "ask": "Is this wet umbrella yours?", "requires": ["c_umbrella"], "answer": "It is. Miss Menon and I shared it out there. The garden's a swamp — if we'd gone anywhere near the study window you'd see our footprints in the mud from here to Coonoor.", "statement": "Vikram says the umbrella is his; they never left the verandah." },
+        { "id": "d_vik_ledger", "ask": "Did you know the Colonel was cheating the estate workers?", "requires": ["c_ledger"], "answer": "...No. If that's true, it breaks my heart. Lakshmi suspected something — she was going to raise it with him. I told her to wait until I could stand beside her.", "statement": "Vikram says Lakshmi suspected the wage fraud." }
+      ]
+    },
+    {
+      "id": "hale",
+      "name": "Dr. Edmund Hale",
+      "role": "Family physician",
+      "room": "dining", "pos": [-2.4, 1.6], "facing": 120,
+      "color": "#3a3a3a", "skin": "#e8c0a0", "hair": "#c0c0c0",
+      "bio": "51. Practices at the Coonoor Dispensary. Ten years the Colonel's doctor. Fond of the card tables at the Club.",
+      "greeting": "Dr. Edmund Hale. Arthur's physician for ten years. It was his heart, Detective — I warned him that brandy would kill him one day. Tonight it did.",
+      "dialogue": [
+        { "id": "d_hale_cause", "ask": "What killed the Colonel?", "answer": "His heart, plainly. Weak for years. I gave him his digitalis drops at dinner myself — quarter to nine, the usual dose. The cold, the brandy, the storm... it was only a matter of time.", "statement": "Dr. Hale says he gave the Colonel his digitalis drops at 8:45 and blames heart failure." },
+        { "id": "d_hale_cut", "ask": "Where were you during the power cut?", "answer": "In the drawing room. The whole time. Sitting in the dark with Margaret, listening to that wretched rain. Ask anyone.", "statement": "Dr. Hale claims he never left the drawing room during the power cut." },
+        { "id": "d_hale_bag", "ask": "There's an empty loop in your bag — the digitalis.", "requires": ["c_bag"], "answer": "I used it at dinner. Obviously. A physician's bag isn't a museum, Detective.", "statement": "Dr. Hale says the missing digitalis vial was used at dinner." },
+        { "id": "d_hale_loan", "ask": "The Colonel was going to call in your loan and report your forged prescriptions.", "requires": ["c_letter"], "answer": "...Where did you get that? Arthur was a hard man, he threatened everybody. Yes, I owed him money. Owing money is hardly a hanging offence.", "statement": "Dr. Hale admits he owed the Colonel money." },
+        { "id": "d_hale_vial", "ask": "Your digitalis vial — burnt in the kitchen stove.", "requires": ["c_vial"], "answer": "That — that's impossible. Someone must have taken it from my bag. Anyone could have! I won't say another word without a solicitor.", "statement": "Confronted with the burnt vial, Dr. Hale panics and refuses to talk." }
+      ]
+    },
+    {
+      "id": "lakshmi",
+      "name": "Lakshmi Menon",
+      "role": "Estate accountant",
+      "room": "dining", "pos": [2.6, -1.8], "facing": -110,
+      "color": "#8a2a4a", "skin": "#9a6a48", "hair": "#120c08",
+      "bio": "31. From Palghat. Keeps the books for Ravenscroft Estate. Sharp, proud, and nobody's fool.",
+      "greeting": "Lakshmi Menon. I keep the accounts for Ravenscroft Estate. Kept them, I suppose. Go on, Detective — everyone else has already decided I'm the suspicious one.",
+      "dialogue": [
+        { "id": "d_lak_where", "ask": "Where were you at a quarter to ten?", "answer": "On the verandah with Captain Rao, under his umbrella, from half past nine until the lights came back. We didn't move. The steps down to the garden were a waterfall.", "statement": "Lakshmi confirms she was on the verandah with Vikram during the power cut." },
+        { "id": "d_lak_hale", "ask": "Did you notice anything about Dr. Hale tonight?", "answer": "He kept checking his bag at dinner, like a man counting money. He barely touched his food. And he insisted on giving the Colonel his drops himself — Raghavan usually does it.", "statement": "Lakshmi says Dr. Hale was nervous and kept checking his bag at dinner." },
+        { "id": "d_lak_ledger", "ask": "You knew about the stolen wages.", "requires": ["c_ledger"], "answer": "Yes. Three years he skimmed the pickers' wages. I confronted him this morning. He laughed and said no court would believe a native clerk over a Colonel. I was angry, Detective. Furious. But I wanted him in a courtroom — not a coffin.", "statement": "Lakshmi admits she confronted the Colonel about the wage fraud this morning." }
+      ]
+    },
+    {
+      "id": "raghavan",
+      "name": "Raghavan Nair",
+      "role": "Butler, 22 years in service",
+      "room": "kitchen", "pos": [-1.2, -1.8], "facing": 30,
+      "color": "#e8e2d0", "skin": "#7a5236", "hair": "#d8d8d8",
+      "bio": "58. From Kottayam. Has run the Pemberton household since 1924. Knows every creak in the floorboards.",
+      "greeting": "Vanakkam, sir. Raghavan Nair. Twenty-two years I have served Colonel sahib. Ask me anything — this house has no secrets from me.",
+      "dialogue": [
+        { "id": "d_rag_brandy", "ask": "When did you last see the Colonel alive?", "answer": "Half past nine, sir. I took him his brandy in the study. He was writing a letter, very angry. He told me, 'Raghavan, tomorrow I settle accounts with the doctor.'", "statement": "Raghavan served the Colonel brandy at 9:30; the Colonel said he would 'settle accounts with the doctor' tomorrow." },
+        { "id": "d_rag_cut", "ask": "Where were you during the power cut?", "answer": "The lights went at twenty to ten. I took a torch to the godown behind the kitchen for the storm lanterns. The wind was terrible, sir — it took me nearly twenty minutes.", "statement": "Raghavan says he went to the godown for lanterns during the power cut." },
+        { "id": "d_rag_stove", "ask": "Did you notice anything strange in the kitchen?", "answer": "When I came back, around ten o'clock, the stove door was open. Smell of burning — paper, and something like medicine. I closed that stove myself after dinner, sir. I ticked it on my slate. Nobody comes into my kitchen.", "statement": "Raghavan found the stove door open at 10:00 with a smell of burning — he had closed it himself." },
+        { "id": "d_rag_found", "ask": "Tell me how you found him.", "answer": "Half past ten I went to collect the glass. Sahib was on the floor, his watch broken beside him. I shouted for the doctor. He came very slowly, sir. Very slowly. Like a man who already knew.", "statement": "Raghavan found the body at 10:30. He says Dr. Hale came 'very slowly, like a man who already knew'." }
+      ]
+    }
+  ],
+  "timeline": [
+    { "time": "7:30 PM", "text": "Dinner is served in the dining room. All five guests and the Colonel are present." },
+    { "time": "8:45 PM", "text": "Dr. Hale gives the Colonel his digitalis heart drops at the table.", "unlockedBy": ["c_seating", "d_hale_cause", "c_slate"] },
+    { "time": "9:15 PM", "text": "The Colonel retires to his study, complaining of the cold." },
+    { "time": "9:30 PM", "text": "Raghavan serves the Colonel a brandy. The Colonel is alive, writing an angry letter.", "unlockedBy": ["d_rag_brandy", "c_slate"] },
+    { "time": "9:35 PM", "text": "Capt. Rao and Lakshmi Menon step out onto the verandah.", "unlockedBy": ["d_vik_where", "d_lak_where", "c_umbrella"] },
+    { "time": "9:40 PM", "text": "The storm knocks out the power. The bungalow goes dark." },
+    { "time": "9:40 PM", "text": "Raghavan goes out to the godown to fetch storm lanterns.", "unlockedBy": ["d_rag_cut", "c_lantern"] },
+    { "time": "9:42 PM", "text": "Dr. Hale leaves the drawing room, saying he will 'wash his hands'.", "unlockedBy": ["d_mar_cut"] },
+    { "time": "9:52 PM", "text": "The Colonel collapses in his study. His pocket watch stops as he falls.", "unlockedBy": ["c_watch"] },
+    { "time": "9:55 PM", "text": "The power returns. Dr. Hale walks back into the drawing room, out of breath.", "unlockedBy": ["d_mar_cut"] },
+    { "time": "10:00 PM", "text": "Raghavan returns and finds the kitchen stove door open, smelling of burning.", "unlockedBy": ["d_rag_stove"] },
+    { "time": "10:30 PM", "text": "Raghavan finds the Colonel dead on the study floor." }
+  ],
+  "motives": [
+    { "id": "m_debt", "text": "To stop the Colonel calling in a debt and exposing forged prescriptions" },
+    { "id": "m_marriage", "text": "To escape a loveless marriage and go home to England" },
+    { "id": "m_wages", "text": "Revenge for the wages stolen from the estate workers" },
+    { "id": "m_inherit", "text": "To inherit the Ravenscroft estate" },
+    { "id": "m_service", "text": "Revenge for years of mistreatment in service" }
+  ],
+  "solution": {
+    "culprit": "hale",
+    "motive": "m_debt",
+    "evidence": ["c_vial", "c_letter", "c_bag"],
+    "explanation": [
+      "Dr. Edmund Hale killed Colonel Pemberton.",
+      "Hale was drowning in gambling debts, and had been forging prescriptions in the Colonel's name to cover them. The Colonel found out. Tonight he was writing to his bank to call in Hale's Rs. 4,000 loan — and to report him to the Medical Council. Hale's career, his name, his freedom: all finished by morning.",
+      "When the storm cut the power at 9:40, Hale slipped out of the drawing room 'to wash his hands'. In the dark study he emptied a full vial of digitalis — the Colonel's own heart medicine — into the brandy glass. To a weak heart, it is a death sentence that looks exactly like heart failure.",
+      "The Colonel collapsed at 9:52; his watch stopped as he fell. Hale ducked into the empty kitchen while Raghavan was out at the godown, threw the vial into the stove, and walked back into the drawing room at 9:55, out of breath. The fire was too low. The vial survived.",
+      "The empty loop in his bag, the unfinished letter, and the half-burnt vial hang him."
+    ]
+  }
+}
